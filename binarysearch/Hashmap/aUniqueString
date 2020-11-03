@@ -1,0 +1,17 @@
+import java.util.*;
+
+class Solution {
+    public boolean solve(String s) {
+        Map<Character,Integer> test = new HashMap<Character,Integer>();
+        char[] c = s.toCharArray();//change string to char array
+        for(char a:c){//
+            if(test.containsKey(a)){
+                return false;
+            }else{
+                test.put(a,1);
+            }
+        }
+        return true;
+        
+    }
+}
